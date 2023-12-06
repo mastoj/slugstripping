@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
+//export const runtime = "node";
 export const runtime = "edge";
 
 type Context = {
