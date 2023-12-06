@@ -1,5 +1,4 @@
-import { NextApiRequest } from "next";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 export const runtime = "edge";
 
@@ -8,6 +7,6 @@ type Context = {
     slug: string[];
   };
 };
-export const GET = async (req: NextApiRequest, { params }: Context) => {
+export const GET = async (req: NextRequest, { params }: Context) => {
   return NextResponse.json(params);
 };
